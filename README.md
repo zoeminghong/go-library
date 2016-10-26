@@ -17,3 +17,7 @@
 该教程主要是针对想要Go入门学习的，够用就好
 
 如果想要进一步学习可能不是特别合适
+
+![https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+本文基于署名-非商业性使用-相同方式共享 4.0许可协议发布，欢迎转载、使用、重新发布，但务必保留文章署名迹_Jason（包含链接：https://github.com/zoeminghong/go-library ），不得用于商业目的，基于本文修改后的作品务必以相同的许可发布。如有任何疑问，请[微博](http://weibo.com/jasongoo123)与我联系
