@@ -66,6 +66,65 @@ ip 变量的存储地址: 20818a220
 *ip 变量的值: 20
 ```
 
+`示例说明`
+
+```go
+package main
+
+import "fmt"
+
+type name int8
+type first struct {
+	a int
+	b bool
+	name
+}
+
+func main() {
+	a := new(first)
+	a.a = 1
+	a.name = 11
+	fmt.Println(a.b, a.a, a.name)
+}
+```
+
+`结果`
+
+```go
+false 1 11
+```
+
+> 未初始化的变量自动赋上初始值
+
+```go
+package main
+
+import "fmt"
+
+type name int8
+type first struct {
+	a int
+	b bool
+	name
+}
+
+func main() {
+	var a = first{1, false, 2}
+	var b *first = &a
+	fmt.Println(a.b, a.a, a.name, &a, b.a, &b, (*b).a)
+}
+```
+
+`结果`
+
+```go
+false 1 2 &{1 false 2} 1 0xc042068018 1
+```
+
+> 获取指针地址在指针变量前加&的方式
+
+
+
 **Go 空指针**
 当一个指针被定义后没有分配到任何变量时，它的值为 nil。
 nil 指针也称为空指针。

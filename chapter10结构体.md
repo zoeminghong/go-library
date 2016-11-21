@@ -25,6 +25,9 @@ variable_name := structure_variable_type {value1, value2...valuen}
 P := person{"Tom", 25}
 2.通过field:value的方式初始化，这样可以任意顺序
 P := person{age:24, name:"Tom"}
+3.new方式,未设置初始值的，会赋予类型的默认初始值
+p := new(person)
+p.age=24
 ```
 
 **访问结构体成员**
@@ -174,7 +177,7 @@ func main() {
 >
 > 基于上面的理解，所以可以`mark.Human = Human{"Marcus", 55, 220} `和`mark.Human.age -= 1`
 >
-> 若存在匿名字段中的字段与非匿名字段名字相同，则最外层的优先访问（重载）
+> 若存在匿名字段中的字段与非匿名字段名字相同，则最外层的优先访问，就近原则
 
 通过匿名访问和修改字段相当的有用，但是不仅仅是struct字段哦，所有的内置类型和自定义类型都是可以作为匿名字段的。
 

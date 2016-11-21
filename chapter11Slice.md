@@ -3,7 +3,7 @@
 Go 语言切片是对数组的抽象。
 Go 数组的长度不可改变，在特定场景中这样的集合就不太适用，Go中提供了一种灵活，功能强悍的内置类型切片("动态数组"),与数组相比切片的长度是不固定的，可以追加元素，在追加时可能使切片的容量增大
 
-切片与数组相比，不需要设定长度，相对来说比较自由
+切片与数组相比，不需要设定长度，在[]中不用设定值，相对来说比较自由
 
 从概念上面来说slice像一个结构体，这个结构体包含了三个元素： 
 
@@ -33,6 +33,12 @@ make([]T, length, capacity)
 **初始化**
 
 ```go
+s[0] = 1
+s[1] = 2
+s[2] = 3
+```
+
+```go
 s :=[] int {1,2,3 } 
 ```
 
@@ -40,7 +46,7 @@ s :=[] int {1,2,3 }
 s := arr[startIndex:endIndex] 
 ```
 
-将arr中从下标startIndex到endIndex-1 下的元素创建为一个新的切片（前闭后开），长度为endIndex-startIndex
+将arr中从下标startIndex到endIndex-1 下的元素创建为一个新的切片（**前闭后开**），长度为endIndex-startIndex
 
 ```go
 s := arr[startIndex:] 
@@ -216,6 +222,7 @@ len=0 cap=0 slice=[]
 len=1 cap=2 slice=[0]
 len=2 cap=2 slice=[0 1]
 len=5 cap=8 slice=[0 1 2 3 4]
-len=5 cap=16 slice=[0 1 2 3 4]
+len=5 cap=12 slice=[0 1 2 3 4]
 ```
 
+> numbers1与numbers两者不存在联系，numbers发生变化时，numbers1是不会随着变化的。也就是说copy方法是不会建立两个切片的联系的
