@@ -101,7 +101,7 @@ Go 语言中变量可以在三个地方声明：
 
 **全局变量**
 
-在函数体外声明的变量称之为全局变量，全局变量可以在整个包甚至外部包（被导出后）使用。
+在函数体外声明的变量称之为全局变量，首字母大写全局变量可以在整个包甚至外部包（被导出后）使用。
 
 ```go
 package main
@@ -240,7 +240,7 @@ type Employee struct {
 	company string
 }
 
-//0Human定义method
+//Human定义method
 func (h *Human) SayHi() {
 	fmt.Printf("Hi, I am %s you can call me on %s\n", h.name, h.phone)
 }
@@ -256,7 +256,6 @@ func main() {
 	mark.SayHi()
 	sam.SayHi()
 }
-
 ```
 
 `结果`
@@ -266,5 +265,8 @@ Hi, I am Mark you can call me on 222-222-YYYY
 Hi, I am Sam, I work at Golang Inc. Call me on 111-888-XXXX
 ```
 
+#### 总结
 
+- 方法是可以继承和重写的
+- 存在继承关系时，按照就近原则，进行调用
 

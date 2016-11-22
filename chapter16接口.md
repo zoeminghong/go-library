@@ -104,7 +104,7 @@ func (h Human) SayHi() {
 } //Human实现Sing方法
 func (h Human) Sing(lyrics string) {
 	fmt.Println("La la la la...", lyrics)
-} //Employee重载Human的SayHi方法
+} //Employee重写Human的SayHi方法
 func (e Employee) SayHi() {
 	fmt.Printf("Hi, I am %s, I work at %s. Call me on %s\n", e.name,
 		e.company, e.phone) //Yes you can split into 2 lines here.
@@ -144,7 +144,6 @@ func main() {
 	}
 }
 
-
 ```
 
 `结果`
@@ -165,6 +164,10 @@ func main() {
 那么interface里面到底能存什么值呢？如果我们定义了一个interface的变量，那么这个变量里面可以存实现这个
 interface的任意类型的对象。例如上面例子中，我们定义了一个Men interface类型的变量m，那么m里面可以存
 Human、Student或者Employee值
+
+> 当然，使用指针的方式，也是可以的
+>
+> 但是，接口对象不能调用实现对象的属性
 
 **interface函数参数**
 
@@ -196,7 +199,6 @@ func main() {
 	s = new(Test)
 	s.Len()
 }
-
 ```
 
 `结果`
@@ -274,3 +276,8 @@ Controller实现了所有的Something接口方法，当结构体T中调用Contro
 如果`something = new(test.Controller)`则调用的是Controller中的Get方法。
 
 T可以使用Controller结构体中定义的变量
+
+#### 总结
+
+接口对象不能调用接口实现对象的属性
+
