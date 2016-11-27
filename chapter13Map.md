@@ -114,6 +114,35 @@ Capital of Japan is Tokyo
 Capital of India is New Delhi
 ```
 
+**ok-idiom**
+
+使用ok-idiom获取值，可知道key/value是否存在
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	m := make(map[string]int)
+	m["a"] = 1
+	x, ok := m["b"]
+	fmt.Println(x, ok)
+	x, ok = m["a"]
+	fmt.Println(x, ok)
+}
+
+```
+
+`结果`
+
+```go
+0 false
+1 true
+```
+
 **make、new操作**
 
 make用于内建类型（map、slice 和channel）的内存分配。new用于各种类型的内存分配

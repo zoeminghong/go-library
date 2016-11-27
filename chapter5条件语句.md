@@ -92,6 +92,42 @@ func main() {
 }
 ```
 
+如需贯通后续的case，就添加fallthrough
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+type data [2]int
+
+func main() {
+	switch x := 5; x {
+	default:
+		fmt.Println(x)
+	case 5:
+		x += 10
+		fmt.Println(x)
+		fallthrough
+	case 6:
+		x += 20
+		fmt.Println(x)
+
+	}
+
+}
+
+```
+
+`结果`
+
+```go
+15
+35
+```
+
 #### Type Switch
 
 switch 语句还可以被用于 type-switch 来判断某个 interface 变量中实际存储的变量类型。

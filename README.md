@@ -14,6 +14,10 @@
 - 内存数据库，前一段时间Google开发的groupcache，couchbase的部分组建
 - 云平台，目前国外很多云平台在采用Go开发
 
+### 更新日志
+
+[更新日志](https://github.com/zoeminghong/go-library/blob/master/更新日志.md)
+
 ###  目录
 
 [chapter1环境配置](https://github.com/zoeminghong/go-library/blob/master/chapter1%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.md)
@@ -52,9 +56,17 @@
 
 [chapter18错误处理](https://github.com/zoeminghong/go-library/blob/master/chapter18%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86.md)
 
+[chapter19自定义类型](https://github.com/zoeminghong/go-library/blob/master/chapter19自定义类型.md)
+
 该教程主要是针对想要Go入门学习的，够用就好
 
 如果想要进一步学习可能不是特别合适
+
+欢迎关注我微信公众号，第一时间通知你，更新内容
+
+![http://7xp64w.com1.z0.glb.clouddn.com/qrcode_for_gh_3e33976a25c9_258.jpg](http://7xp64w.com1.z0.glb.clouddn.com/qrcode_for_gh_3e33976a25c9_258.jpg)
+
+也可以通过新浪微博：**@迹_Jason** 与我交流
 
 ![https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
